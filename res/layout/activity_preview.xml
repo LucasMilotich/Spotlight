@@ -11,11 +11,20 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/btnFiltrarTapas"
+            android:id="@+id/btnCambiarFoto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="Filtrar Tapas" />
+            android:text="Cambiar Foto" />
+        
+        <Button
+            android:id="@+id/btnCambiarTapa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Cambiar Tapa" />
+        
+        
     </LinearLayout>
 
 </LinearLayout>

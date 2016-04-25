@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
+public class FiltrosActivity extends Activity {
 
-	private Button btnFiltrarTapas;
+	private Button btnIniciarEdicion;
 	
 	/****				Metodos de activity					****/
 
@@ -19,7 +19,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		linkUIComponents();
 		loadListeners();
-
 	}
 
 	public void onResume() {
@@ -42,20 +41,18 @@ public class MainActivity extends Activity {
 
 	private void linkUIComponents() {
 
-		setContentView(R.layout.activity_main);
-		btnFiltrarTapas = (Button) findViewById(R.id.btnFiltrarTapas);
+		setContentView(R.layout.activity_filtros);
+		btnIniciarEdicion = (Button) findViewById(R.id.btnIniciarEdicion);
 
 	}
 
 	private void loadListeners() {
 
-		btnFiltrarTapas.setOnClickListener(new OnClickListener() {
+		btnIniciarEdicion.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				
-				Intent intent = new Intent(MainActivity.this,
-						FiltrosActivity.class);
-				startActivity(intent);
+				startActivity(new Intent(FiltrosActivity.this,
+						PreviewActivity.class));
 			}
 		});
 
