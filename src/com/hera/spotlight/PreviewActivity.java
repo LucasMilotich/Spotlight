@@ -27,14 +27,14 @@ public class PreviewActivity extends Activity {
 		super.onResume();
 	}
 	
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			moveTaskToBack(true);
-			return true;
-		}
-		return super.onKeyDown(keyCode, event);
-	}
+//	@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//		if (keyCode == KeyEvent.KEYCODE_BACK) {
+//
+//			return true;
+//		}
+//		return super.onKeyDown(keyCode, event);
+//	}
 
 	
 	

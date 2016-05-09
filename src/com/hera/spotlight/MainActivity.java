@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-	private Button btnFiltrarTapas;
+	private Button btnComenzarEdicion;
 	
 	/****				Metodos de activity					****/
 
@@ -26,14 +26,14 @@ public class MainActivity extends Activity {
 		super.onResume();
 	}
 	
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			moveTaskToBack(true);
-			return true;
-		}
-		return super.onKeyDown(keyCode, event);
-	}
+//	@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//		if (keyCode == KeyEvent.KEYCODE_BACK) {
+//			moveTaskToBack(true);
+//			return true;
+//		}
+//		return super.onKeyDown(keyCode, event);
+//	}
 
 	
 	
@@ -43,13 +43,13 @@ public class MainActivity extends Activity {
 	private void linkUIComponents() {
 
 		setContentView(R.layout.activity_main);
-		btnFiltrarTapas = (Button) findViewById(R.id.btnFiltrarTapas);
+		btnComenzarEdicion = (Button) findViewById(R.id.btnComenzarEdicion);
 
 	}
 
 	private void loadListeners() {
 
-		btnFiltrarTapas.setOnClickListener(new OnClickListener() {
+		btnComenzarEdicion.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				

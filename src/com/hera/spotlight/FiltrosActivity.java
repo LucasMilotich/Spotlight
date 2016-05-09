@@ -1,6 +1,5 @@
 package com.hera.spotlight;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +11,8 @@ import android.widget.Button;
 public class FiltrosActivity extends Activity {
 
 	private Button btnIniciarEdicion;
-	
-	/****				Metodos de activity					****/
+
+	/**** Metodos de activity ****/
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,20 +23,17 @@ public class FiltrosActivity extends Activity {
 	public void onResume() {
 		super.onResume();
 	}
-	
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			moveTaskToBack(true);
-			return true;
-		}
-		return super.onKeyDown(keyCode, event);
-	}
 
-	
-	
-	
-	/****				Metodos principales					****/	
+	// @Override
+	// public boolean onKeyDown(int keyCode, KeyEvent event) {
+	// if (keyCode == KeyEvent.KEYCODE_BACK) {
+	// moveTaskToBack(true);
+	// return true;
+	// }
+	// return super.onKeyDown(keyCode, event);
+	// }
+
+	/**** Metodos principales ****/
 
 	private void linkUIComponents() {
 
@@ -55,10 +51,5 @@ public class FiltrosActivity extends Activity {
 						PreviewActivity.class));
 			}
 		});
-
-		
-
 	}
-
-
 }
