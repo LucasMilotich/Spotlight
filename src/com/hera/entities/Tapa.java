@@ -17,6 +17,7 @@ public class Tapa {
 	private int posicionFotoX;
 	private int posicionFotoY;
 	private int tamanioFotoX;
+
 	private int tamanioFotoY;
 	// texto
 	private String fuente;
@@ -116,5 +117,21 @@ public class Tapa {
 	public void setMergeTapa(Bitmap mergeTapa) {
 		this.mergeTapa = mergeTapa;
 	}
+	public int getTamanioFotoX() {
+		return tamanioFotoX;
+	}
+
+	public void setTamanioFotoX(int tamanioFotoX) {
+		this.tamanioFotoX = tamanioFotoX;
+	}
+
+	public int getTamanioFotoY() {
+		return tamanioFotoY;
+	}
+
+	public void setTamanioFotoY(int tamanioFotoY) {
+		this.tamanioFotoY = tamanioFotoY;
+	}
+	
 	
 }

@@ -55,8 +55,8 @@ public class ImageProcessing {
 		
 		this.foto.setFoto(this.foto.getFoto().copy(Config.ARGB_8888, true));
 		
-		foto.getFoto().setHeight(tapa.getTamanioTapaY());
-		foto.getFoto().setWidth(tapa.getTamanioTapaX());
+		foto.getFoto().setHeight(tapa.getTamanioFotoY());
+		foto.getFoto().setWidth(tapa.getTamanioFotoX());
 		
 		dibujador = new Canvas(tapaMerge);
 		
