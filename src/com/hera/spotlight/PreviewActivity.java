@@ -26,8 +26,6 @@ public class PreviewActivity extends Activity {
 
     private static int RESULT_LOAD_FOTO = 1;
     private static int RESULT_LOAD_TAPA = 2;
-    String imgDecodableString;
-
 
     private Bitmap fotoSeleccionada = null;
     private Bitmap tapaSeleccionada = null;
@@ -47,7 +45,7 @@ public class PreviewActivity extends Activity {
         super.onResume();
         if (fotoSeleccionada != null && tapaSeleccionada != null) {
             Foto foto = new Foto(fotoSeleccionada);
-            Tapa tapa = new Tapa(206, 525,10,10, tapaSeleccionada);
+            Tapa tapa = new Tapa(10, 10, 2, 2, tapaSeleccionada);
             ImageProcessing imgProcessing = new ImageProcessing(foto, tapa);
             imgView.setImageBitmap(imgProcessing.mergeFoto());
         }
@@ -107,7 +105,7 @@ public class PreviewActivity extends Activity {
                 cursor.moveToFirst();
 
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                imgDecodableString = cursor.getString(columnIndex);
+                String imgDecodableString = cursor.getString(columnIndex);
                 cursor.close();
 
                 if (requestCode == RESULT_LOAD_FOTO) {
