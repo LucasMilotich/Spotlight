@@ -5,6 +5,7 @@ import java.io.File;
 import android.graphics.Bitmap;
 
 
+
 public class Foto {
 	
 	// caracteristicas tomadas del xml
@@ -13,7 +14,21 @@ public class Foto {
 	
 	private File pathFoto;
 	private Bitmap foto;
-
+	private int posicionFotoX;
+	private int posicionFotoy;
+	
+	  public Foto(int tamanioFotoX, int tamanioFotoY, int posicionFotoX, int posicionFotoy, File pathFoto, Bitmap foto) {
+	        this.tamanioFotoX = tamanioFotoX;
+	        this.tamanioFotoY = tamanioFotoY;
+	        this.posicionFotoX = posicionFotoX;
+	        this.posicionFotoy = posicionFotoy;
+	        this.pathFoto = pathFoto;
+	        this.foto = foto;
+	    }
+	  
+	public Foto(Bitmap foto){
+		this.foto = foto;
+	}
 	public int getTamanioFotoX() {
 		return tamanioFotoX;
 	}

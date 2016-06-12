@@ -1,30 +1,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
-    android:orientation="vertical" >
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal" >
 
-        <Button
+    <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+    </ImageView>
+
+    <Button
             android:id="@+id/btnCambiarFoto"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Cambiar Foto" />
-        
-        <Button
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:text="Cambiar Foto">
+    </Button>
+
+
+    <Button
             android:id="@+id/btnCambiarTapa"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Cambiar Tapa" />
-        
-        
-    </LinearLayout>
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:text="Cambiar Tapa">
+
+    </Button>
 
 </LinearLayout>

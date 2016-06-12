@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 
 public class Tapa {
+
 	
 	private String nombreTapa;
 	
@@ -26,7 +27,15 @@ public class Tapa {
 	private File pathTapa;
 	// tapa finalizada
 	private Bitmap mergeTapa;
-	
+	  public Tapa(int tamanioTapaX, int tamanioTapaY, Bitmap tapa) {
+	        this.tamanioTapaX = tamanioTapaX;
+	        this.tamanioTapaY = tamanioTapaY;
+	        this.tapa = tapa;
+	    }
+
+	    public Tapa() {
+
+	    }
 	
 	public int getPosicionFotoX() {
 		return posicionFotoX;
@@ -104,6 +113,4 @@ public class Tapa {
 		this.mergeTapa = mergeTapa;
 	}
 	
-	
-
 }

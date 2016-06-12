@@ -2,6 +2,7 @@ package com.hera.imageProcessing;
 
 import java.io.File;
 
+import android.media.Image;
 import com.hera.entities.Foto;
 import com.hera.entities.Tapa;
 
@@ -12,13 +13,17 @@ import android.graphics.Canvas;
 
 public class ImageProcessing {
 
+
 	private Tapa tapa;
 	private Foto foto;
 	private Bitmap tapaMerge;
 	
 	Canvas dibujador;
 	
-	
+	public ImageProcessing(Foto foto, Tapa tapa){
+		this.foto = foto;
+		this.tapa = tapa;
+	}
 	public Bitmap posicionarFoto(int x, int y){
 		
 		Bitmap tapa = null;
@@ -42,8 +47,8 @@ public class ImageProcessing {
 	
 	
 	
-	public Bitmap mergeFoto(Tapa tapa, Foto foto){
-		BitmapFactory bf = new BitmapFactory();
+	public Bitmap mergeFoto(){
+		
 		
 		this.tapaMerge =  Bitmap.createBitmap(tapa.getTamanioTapaX(),tapa.getTamanioTapaY(),Bitmap.Config.ARGB_8888);
 		this.tapaMerge = this.tapaMerge.copy(Config.ARGB_8888, true);
@@ -61,11 +66,8 @@ public class ImageProcessing {
 		return tapaMerge;
 		
 	}
-	
-	
-	
-	
-	
-	
-	
 }
+	
+	
+	
+	
