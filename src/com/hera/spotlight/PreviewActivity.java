@@ -24,7 +24,8 @@ public class PreviewActivity extends Activity {
     private Button btnCambiarTapa;
     ImageView imgView;
 
-    private static int RESULT_LOAD_IMAGE = 1;
+    private static int RESULT_LOAD_FOTO = 1;
+    private static int RESULT_LOAD_TAPA = 2;
     String imgDecodableString;
 
 
@@ -80,7 +81,7 @@ public class PreviewActivity extends Activity {
 
             public void onClick(View v) {
                 Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+                startActivityForResult(galleryIntent, RESULT_LOAD_FOTO);
             }
         });
 
@@ -88,7 +89,7 @@ public class PreviewActivity extends Activity {
 
             public void onClick(View v) {
                 Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+                startActivityForResult(galleryIntent, RESULT_LOAD_TAPA);
             }
         });
 
@@ -97,30 +98,23 @@ public class PreviewActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try {
-            // When an Image is picked
-            if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK
-                    && null != data) {
-                // Get the Image from data
+            boolean _imageLoaded = requestCode == RESULT_LOAD_FOTO || requestCode == RESULT_LOAD_TAPA;
+            if (_imageLoaded && resultCode == RESULT_OK && null != data) {
 
                 Uri selectedImage = data.getData();
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
-
-                // Get the cursor
-                Cursor cursor = getContentResolver().query(selectedImage,
-                        filePathColumn, null, null, null);
-                // Move to first row
+                Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
                 cursor.moveToFirst();
 
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                 imgDecodableString = cursor.getString(columnIndex);
                 cursor.close();
-                // Set the Image in ImageView after decoding the String
-                if (fotoSeleccionada == null) {
+
+                if (requestCode == RESULT_LOAD_FOTO) {
                     fotoSeleccionada = BitmapFactory.decodeFile(imgDecodableString);
                     imgView.setImageBitmap(fotoSeleccionada);
-                } else {
+                } else if (requestCode == RESULT_LOAD_TAPA) {
                     tapaSeleccionada = BitmapFactory.decodeFile(imgDecodableString);
-//                    imgView.setImageBitmap(tapaSeleccionada);
                 }
 
             } else {

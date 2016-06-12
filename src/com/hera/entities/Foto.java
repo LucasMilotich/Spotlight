@@ -5,8 +5,8 @@ import java.io.File;
 import android.graphics.Bitmap;
 
 
-
 public class Foto {
+
 	
 	// caracteristicas tomadas del xml
 	
