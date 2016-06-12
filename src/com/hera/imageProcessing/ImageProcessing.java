@@ -52,6 +52,9 @@ public class ImageProcessing {
 		
 		this.tapaMerge =  Bitmap.createBitmap(tapa.getTamanioTapaX(),tapa.getTamanioTapaY(),Bitmap.Config.ARGB_8888);
 		this.tapaMerge = this.tapaMerge.copy(Config.ARGB_8888, true);
+		
+		this.foto.setFoto(this.foto.getFoto().copy(Config.ARGB_8888, true));
+		
 		foto.getFoto().setHeight(tapa.getTamanioTapaY());
 		foto.getFoto().setWidth(tapa.getTamanioTapaX());
 		
