@@ -3,14 +3,14 @@ package com.hera.entities;
 import java.io.File;
 
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
+
 
 public class Foto {
-
+	
+	// caracteristicas tomadas del xml
 	private int tamanioFotoX;
 	private int tamanioFotoY;
-	private int posicionFotoX;
-	private int posicionFotoy;
+	
 	private File pathFoto;
 	private Bitmap foto;
 
@@ -26,18 +26,7 @@ public class Foto {
 	public void setTamanioFotoY(int tamanioFotoY) {
 		this.tamanioFotoY = tamanioFotoY;
 	}
-	public int getPosicionFotoX() {
-		return posicionFotoX;
-	}
-	public void setPosicionFotoX(int posicionFotoX) {
-		this.posicionFotoX = posicionFotoX;
-	}
-	public int getPosicionFotoy() {
-		return posicionFotoy;
-	}
-	public void setPosicionFotoy(int posicionFotoy) {
-		this.posicionFotoy = posicionFotoy;
-	}
+
 	public File getPathFoto() {
 		return pathFoto;
 	}

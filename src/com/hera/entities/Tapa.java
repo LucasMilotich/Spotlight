@@ -12,22 +12,19 @@ public class Tapa {
 	private int tamanioTapaX;
 	private int tamanioTapaY;
 
-	
+	// posicion en donde va la foto
 	private int posicionFotoX;
-
 	private int posicionFotoY;
-	
-	
+	// texto
 	private String fuente;
 	private String tamanio;
-	
-	private File pathTapa;
-	
+
 	private String categoria;
 	private String pais;
 	
 	private Bitmap tapa;
-	
+	private File pathTapa;
+	// tapa finalizada
 	private Bitmap mergeTapa;
 	
 	
