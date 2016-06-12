@@ -1,23 +1,24 @@
 package com.hera.entities;
 
+import java.io.File;
+
 public class Tapa {
 	
 	private String nombreTapa;
 	
 	private int tamanioTapaX;
 	private int tamanioTapaY;
-	private int tamanioFotoX;
-	private int tamanioFotoY;
+
 	
-	private int posicionTapaX;
-	private int posicionTapaY;
 	private int posicionFotoX;
+	private int posicionFotoY;
+	
 	
 	private String fuente;
 	private String tamanio;
 	
-	private String pathTapa;
-	private String pathFoto;
+	private File pathTapa;
+	
 	private String categoria;
 	private String pais;
 	
@@ -38,37 +39,7 @@ public class Tapa {
 	}
 	public void setTamanioTapaY(int tamanioTapaY) {
 		this.tamanioTapaY = tamanioTapaY;
-	}
-	public int getTamanioFotoX() {
-		return tamanioFotoX;
-	}
-	public void setTamanioFotoX(int tamanioFotoX) {
-		this.tamanioFotoX = tamanioFotoX;
-	}
-	public int getTamanioFotoY() {
-		return tamanioFotoY;
-	}
-	public void setTamanioFotoY(int tamanioFotoY) {
-		this.tamanioFotoY = tamanioFotoY;
-	}
-	public int getPosicionTapaX() {
-		return posicionTapaX;
-	}
-	public void setPosicionTapaX(int posicionTapaX) {
-		this.posicionTapaX = posicionTapaX;
-	}
-	public int getPosicionTapaY() {
-		return posicionTapaY;
-	}
-	public void setPosicionTapaY(int posicionTapaY) {
-		this.posicionTapaY = posicionTapaY;
-	}
-	public int getPosicionFotoX() {
-		return posicionFotoX;
-	}
-	public void setPosicionFotoX(int posicionFotoX) {
-		this.posicionFotoX = posicionFotoX;
-	}
+	}	
 	public int getPosicionFotoY() {
 		return posicionFotoY;
 	}
@@ -87,17 +58,11 @@ public class Tapa {
 	public void setTamanio(String tamanio) {
 		this.tamanio = tamanio;
 	}
-	public String getPathTapa() {
+	public File getPathTapa() {
 		return pathTapa;
 	}
-	public void setPathTapa(String pathTapa) {
+	public void setPathTapa(File pathTapa) {
 		this.pathTapa = pathTapa;
-	}
-	public String getPathFoto() {
-		return pathFoto;
-	}
-	public void setPathFoto(String pathFoto) {
-		this.pathFoto = pathFoto;
 	}
 	public String getCategoria() {
 		return categoria;
@@ -111,7 +76,7 @@ public class Tapa {
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
-	private int posicionFotoY;
+	
 	
 	
 	
