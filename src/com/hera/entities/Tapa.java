@@ -2,6 +2,9 @@ package com.hera.entities;
 
 import java.io.File;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+
 public class Tapa {
 	
 	private String nombreTapa;
@@ -11,6 +14,7 @@ public class Tapa {
 
 	
 	private int posicionFotoX;
+
 	private int posicionFotoY;
 	
 	
@@ -21,6 +25,18 @@ public class Tapa {
 	
 	private String categoria;
 	private String pais;
+	
+	private Bitmap tapa;
+	
+	private Bitmap mergeTapa;
+	
+	
+	public int getPosicionFotoX() {
+		return posicionFotoX;
+	}
+	public void setPosicionFotoX(int posicionFotoX) {
+		this.posicionFotoX = posicionFotoX;
+	}
 	
 	public String getNombreTapa() {
 		return nombreTapa;
@@ -78,7 +94,18 @@ public class Tapa {
 	}
 	
 	
-	
+	public Bitmap getTapa() {
+		return tapa;
+	}
+	public void setTapa(Bitmap tapa) {
+		this.tapa = tapa;
+	}
+	public Bitmap getMergeTapa() {
+		return mergeTapa;
+	}
+	public void setMergeTapa(Bitmap mergeTapa) {
+		this.mergeTapa = mergeTapa;
+	}
 	
 	
 

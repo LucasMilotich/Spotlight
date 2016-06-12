@@ -2,6 +2,9 @@ package com.hera.entities;
 
 import java.io.File;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+
 public class Foto {
 
 	private int tamanioFotoX;
@@ -9,7 +12,8 @@ public class Foto {
 	private int posicionFotoX;
 	private int posicionFotoy;
 	private File pathFoto;
-	
+	private Bitmap foto;
+
 	public int getTamanioFotoX() {
 		return tamanioFotoX;
 	}
@@ -39,6 +43,14 @@ public class Foto {
 	}
 	public void setPathFoto(File pathFoto) {
 		this.pathFoto = pathFoto;
+	}
+	
+	
+	public Bitmap getFoto() {
+		return foto;
+	}
+	public void setFoto(Bitmap foto) {
+		this.foto = foto;
 	}
 	
 	
