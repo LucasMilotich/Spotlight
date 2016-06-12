@@ -16,6 +16,8 @@ public class Tapa {
 	// posicion en donde va la foto
 	private int posicionFotoX;
 	private int posicionFotoY;
+	private int tamanioFotoX;
+	private int tamanioFotoY;
 	// texto
 	private String fuente;
 	private String tamanio;
@@ -27,9 +29,11 @@ public class Tapa {
 	private File pathTapa;
 	// tapa finalizada
 	private Bitmap mergeTapa;
-	  public Tapa(int tamanioTapaX, int tamanioTapaY, Bitmap tapa) {
+	  public Tapa(int tamanioTapaX, int tamanioTapaY,int tamanioFotoX, int tamanioFotoY, Bitmap tapa) {
 	        this.tamanioTapaX = tamanioTapaX;
 	        this.tamanioTapaY = tamanioTapaY;
+	        this.tamanioFotoX = tamanioFotoX;
+	        this.tamanioFotoY = tamanioFotoY;
 	        this.tapa = tapa;
 	    }
 

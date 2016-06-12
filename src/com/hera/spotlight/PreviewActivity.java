@@ -46,7 +46,7 @@ public class PreviewActivity extends Activity {
         super.onResume();
         if (fotoSeleccionada != null && tapaSeleccionada != null) {
             Foto foto = new Foto(fotoSeleccionada);
-            Tapa tapa = new Tapa(206, 525, tapaSeleccionada);
+            Tapa tapa = new Tapa(206, 525,10,10, tapaSeleccionada);
             ImageProcessing imgProcessing = new ImageProcessing(foto, tapa);
             imgView.setImageBitmap(imgProcessing.mergeFoto());
         }
