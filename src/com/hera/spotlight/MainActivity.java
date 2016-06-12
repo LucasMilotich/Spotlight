@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
 //		if (keyCode == KeyEvent.KEYCODE_BACK) {
 //			moveTaskToBack(true);
 //			return true;
+//
 //		}
 //		return super.onKeyDown(keyCode, event);
 //	}
